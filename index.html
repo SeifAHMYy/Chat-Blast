@@ -337,8 +337,22 @@ select.form-input{cursor:pointer}
   }
 
    .admin-nav{
-      top: 10px;
+      top: 40px;
     }
+
+    .admin-content {
+   
+    padding: 102px 24px;
+}
+}
+.admin-nav {
+    background: rgb(192 199 216 / 13%);
+    backdrop-filter: blur(20px);
+    /* border-bottom: 1px solid var(--border); */
+    padding: 30px 4px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 /* PARTICLE */
 .particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden}
@@ -525,7 +539,9 @@ select.form-input{cursor:pointer}
 <div class="admin-overlay" id="adminPanel">
   <div class="admin-nav">
     <div class="admin-nav-inner">
-      <div class="admin-logo">AURA <span class="admin-badge">ADMIN</span></div>
+      <div class="admin-logo">AURA <span class="admin-badge">ADMIN</span>
+        <button onclick="logoutAdmin()" style="background:none;border:1px solid rgba(255,68,68,0.3);border-radius:10px;color:var(--danger);padding:7px 14px;cursor:pointer;font-size:12px;font-family:'DM Sans',sans-serif;transition:all 0.2s" onmouseover="this.style.background='rgba(255,68,68,0.1)'" onmouseout="this.style.background='none'">Logout</button>
+      </div>
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
         <div class="admin-tabs" id="adminTabs">
           <button class="admin-tab active" onclick="switchAdminTab('items')">Items</button>
@@ -533,7 +549,6 @@ select.form-input{cursor:pointer}
           <button class="admin-tab" onclick="switchAdminTab('analytics')">Analytics</button>
           <button class="admin-tab" onclick="switchAdminTab('scan')">Scan QR</button>
         </div>
-        <button onclick="logoutAdmin()" style="background:none;border:1px solid rgba(255,68,68,0.3);border-radius:10px;color:var(--danger);padding:7px 14px;cursor:pointer;font-size:12px;font-family:'DM Sans',sans-serif;transition:all 0.2s" onmouseover="this.style.background='rgba(255,68,68,0.1)'" onmouseout="this.style.background='none'">Logout</button>
       </div>
     </div>
   </div>
